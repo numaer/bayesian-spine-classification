@@ -11,6 +11,8 @@ import pandas as pd
 import pymc3 as pm
 from sklearn.model_selection import train_test_split
 
+
+DATASET_PATH = './dataset_spine.csv'
 SELECTED_FEATURES = ['pelvic_tilt', 
         'lumbar_lordosis_angle',
         'pelvic_radius',
@@ -31,7 +33,7 @@ spine_features = ['pelvic_incidence',
 
 def load_data():
     print("Load in and clean our data")
-    raw_data = pd.read_csv("./dataset_spine.csv",
+    raw_data = pd.read_csv(DATASET_PATH,
             header=None,
             skiprows=[0],
             names=spine_features +

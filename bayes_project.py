@@ -59,7 +59,7 @@ def bayesian_model(train_df):
         * NUTs sampler, converges faster than Gibbs
         * Run for 1k samples
     """
-    print("Beginning sampling progress for posteriors of beta random variables.. (if it gets stuck hit enter to wake up process)")
+    print("Beginning sampling progress for posteriors of beta random variables..")
     with pm.Model() as logistic_model:
         pm.glm.GLM.from_formula('binary_back_status ~ pelvic_tilt + lumbar_lordosis_angle + pelvic_radius + degree_spondylolisthesis',
                 train_df[['binary_back_status'] + SELECTED_FEATURES],

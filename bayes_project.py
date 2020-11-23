@@ -5,6 +5,12 @@ and prints the model performance.
 
 Numaer Zaker <nzaker3@gatech.edu>
 IsYE 6420 - Bayesian Statistics - Fall 2020
+---
+
+References used in the creation of this project:
+
+Dataset: https://www.kaggle.com/sammy123/lower-back-pain-symptoms-dataset
+PyMC3 Documentations: https://docs.pymc.io/api.html
 """
 
 import numpy as np

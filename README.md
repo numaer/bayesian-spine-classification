@@ -3,6 +3,8 @@
 
 ### How to Run
 
+Please ensure you run the code with python 3.7>. For this project, I use Python 3.8.3. The code below will install the requirements and then run the project code
+
 ```
 pip install -r requirements.txt
 python bayes_project.py

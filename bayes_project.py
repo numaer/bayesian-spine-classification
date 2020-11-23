@@ -1,9 +1,10 @@
 """ Bayesian Back Modelling
 
-Light weight version of project without visuals
-and simply trains Bayesian regression model on the entire dataset
+Using spine data, trains a Bayesian logistic regression model
+and prints the model performance.
 
 Numaer Zaker <nzaker3@gatech.edu>
+IsYE 6420 - Bayesian Statistics - Fall 2020
 """
 
 import numpy as np
@@ -73,7 +74,7 @@ def bayesian_model(train_df):
 
 def predict_spine_probability(trace, x):
         """ Calculate the probability of a single data point as a posterior predictive distribution
-        We take the mean to give us the best single point estimate
+        We use the mean of the predictive posterior as the probability.
         """
 
         x = x.values
@@ -94,6 +95,8 @@ def calculate_model_performance(trace, X_test, y_test):
     print("# Correctly Classified: ", prediction_results[1][1])
     print("# Incorrectly Classified: ", prediction_results[1][0])
     print("% Model Accuracy: ", 100*round(prediction_results[1][1] / (prediction_results[1][1] + prediction_results[1][0]),4))
+
+    return y_hat, y_hat_mean, y_hat_pred, prediction_results
 
 if __name__ == '__main__':
     raw_data = load_data()

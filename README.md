@@ -1,10 +1,10 @@
 # Bayesian Logistic Regression Modelling for Back Pain Abnormality
 
 Numaer Zaker \<nzaker3@gatech.edu\><br/>
-IsYE 6420 - Bayesian Statistics - Fall 2020<br/>
+IsYE 6420 - Bayesian Statistics - Fall 2020 Project<br/>
 Georgia Institute of Technology<br/>
 
-### How to Run Code Over CLI
+### How to Run Code through Python
 
 Please ensure you run the code with python 3.6.8>. For this project, I use Python 3.8.3. The code below will install the requirements and then run the project code
 

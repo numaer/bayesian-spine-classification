@@ -1,9 +1,12 @@
 # Bayesian Logistic Regression Modelling for Back Pain Abnormality
 
+Numaer Zaker \<nzaker3@gatech.edu\><br/>
+IsYE 6420 - Bayesian Statistics - Fall 2020<br/>
+Georgia Institute of Technology<br/>
 
-### How to Run
+### How to Run Code Over CLI
 
-Please ensure you run the code with python 3.7>. For this project, I use Python 3.8.3. The code below will install the requirements and then run the project code
+Please ensure you run the code with python 3.6.8>. For this project, I use Python 3.8.3. The code below will install the requirements and then run the project code
 
 ```
 pip install -r requirements.txt
@@ -35,7 +38,25 @@ Testing model on test set...
 % Model Accuracy:  85.48
 ```
 
+### How to Run Code Through Jupyter Notebook
+
+Please install [Jupyter notebook here](https://jupyter.org/install). Once you run have jupyter notebook running:
+
+1. Open the __Bayes Project (With Visuals).ipynb__ notebook file
+2. Ensure you are running the notebook in the same directory as __bayes_project.py__ (the notebook depends on this file)
+3. Clear all outputs and run all the cells.
+
+The output will:
+
+* Generate the analysis graphs shown in the report
+* Builds the bayesian logistic regression model
+* Show the accuracy and respective results plot.
+
+For your convenience, there is also a __Bayes Project (With Visuals).html__ that let's you see the code and visuals without Jupyter Notebook.
+
+
 ### Project Structure
 
-- bayes\_project.py - Python executable to run Bayesian logistic regression pymc3 sampler.
-- Bayes Project (With Visuals).ipynb - This file runs the bayes\_project.py code in a Jupyter notebook and also shows the visual seen in the report
+- __bayes\_project.py__ - Python executable to run Bayesian logistic regression pymc3 sampler.
+- __Bayes Project (With Visuals).ipynb__ - This file runs the bayes\_project.py code in a Jupyter notebook and also shows the visual seen in the report
+- __Bayes Project (With Visuals).html__ - This file is the HTML/viewable version of the notebook code and the graphs shown in the report.

@@ -18,7 +18,6 @@ import pandas as pd
 import pymc3 as pm
 from sklearn.model_selection import train_test_split
 
-
 DATASET_PATH = './dataset_spine.csv'
 SELECTED_FEATURES = ['pelvic_tilt', 
         'lumbar_lordosis_angle',
@@ -56,8 +55,6 @@ def split_data(raw_data):
     train_df = pd.concat([X_train, y_train], axis=1)
 
     return X_train, X_test, y_train, y_test, train_df
-
-
 
 def bayesian_model(train_df):
     """ Build our Bayesian logistic regression model with specifications:
@@ -109,3 +106,39 @@ if __name__ == '__main__':
     X_train, X_test, y_train, y_test, train_data = split_data(raw_data)
     trace = bayesian_model(train_data)
     calculate_model_performance(trace, X_test, y_test)
+
+    
+"""
+Sample Output:
+
+$> python bayes_project.py
+Load in and clean our data
+Split dataset into training and testing (80/20)
+Beginning sampling progress for posteriors of beta random variables..
+Auto-assigning NUTS sampler...
+Initializing NUTS using adapt_diag...
+Multiprocess sampling (4 chains in 4 jobs)
+NUTS: [degree_spondylolisthesis, pelvic_radius, lumbar_lordosis_angle, pelvic_tilt, Intercept]
+Sampling 4 chains, 0 divergences: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 8000/8000 [00:32<00:00, 244.29draws/s]
+===== BAYESIAN LOGISTIC REGRESSION POSTERIOR STATISTICS =====
+                            mean     sd  hpd_3%  hpd_97%  mcse_mean  mcse_sd  ess_mean  ess_sd  ess_bulk  ess_tail  r_hat
+Intercept                 10.047  2.788   4.910   15.191      0.082    0.059    1156.0  1105.0    1171.0    1648.0    1.0
+pelvic_tilt                0.114  0.034   0.057    0.182      0.001    0.001    2308.0  2190.0    2334.0    2515.0    1.0
+lumbar_lordosis_angle     -0.075  0.018  -0.107   -0.039      0.000    0.000    1661.0  1661.0    1658.0    2117.0    1.0
+pelvic_radius             -0.080  0.021  -0.120   -0.042      0.001    0.000    1201.0  1132.0    1222.0    1674.0    1.0
+degree_spondylolisthesis   0.169  0.027   0.122    0.223      0.001    0.000    1592.0  1592.0    1569.0    2197.0    1.0
+Testing model on test set...
+===== MODEL PERFORMANCE ON TEST DATA =====
+# Correctly Classified:  53
+# Incorrectly Classified:  9
+% Model Accuracy:  85.48
+
+
+These results are discussed thoroughly in the paper. But at a high level the output shows:
+
+* Degree spondylolisthesis is the strongest indicator of abnormal back
+* Lumbar angle and pelvic radius are weaker indicators of a normal back
+* Pelvic tilt is a indicator of an abnormal back
+* Our model accurately classifies 85.48% of the test set data points.
+
+"""

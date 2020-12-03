@@ -6,7 +6,9 @@ Georgia Institute of Technology<br/>
 
 ### How to Run Code through Python
 
-Please ensure you run the code with python 3.6.8>. For this project, I use Python 3.8.3. The code below will install the requirements and then run the project code
+Please ensure you run the code with Python 3.6.8>=. For this project, I use Python 3.8.3. I also recommend using [Python 3 Virtual Environments](https://docs.python.org/3/library/venv.html) to install the dependencies in an isolated environment. This is optional.
+
+The code below will install the requirements and then run the project code.
 
 ```
 pip install -r requirements.txt
@@ -60,3 +62,21 @@ For your convenience, there is also a __Bayes Project (With Visuals).html__ that
 - __bayes\_project.py__ - Python executable to run Bayesian logistic regression pymc3 sampler.
 - __Bayes Project (With Visuals).ipynb__ - This file runs the bayes\_project.py code in a Jupyter notebook and also shows the visual seen in the report
 - __Bayes Project (With Visuals).html__ - This file is the HTML/web browser viewable version of the notebook code and the graphs shown in the report.
+
+
+### Troubleshooting
+
+#### Mac (OSX)
+
+It is possible you may run into an issue where Theano fails to run on OSX. This is not an issue with the application but rather installation of PyMC3 and Theano. Ensure:
+
+* You have the developer tools installed via xcode which contain things like the C compiler
+* If you run into Theano missing C headers, The below should resolve it: 
+```
+cd /Library/Developer/CommandLineTools/Packages/
+open macOS_SDK_headers_for_macOS_10.14.pkg
+```
+
+#### Windows/Other
+
+The application should run fine on Windows and Linux assuming installations are correct.

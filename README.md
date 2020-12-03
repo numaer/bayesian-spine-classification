@@ -20,7 +20,7 @@ Sample Output:
 $> python bayes_project.py
 Load in and clean our data
 Split dataset into training and testing (80/20)
-Beginning sampling progress for posteriors of beta random variables..
+Beginning sampling progress for posteriors of our random variables..
 Auto-assigning NUTS sampler...
 Initializing NUTS using adapt_diag...
 Multiprocess sampling (4 chains in 4 jobs)

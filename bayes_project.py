@@ -63,7 +63,7 @@ def bayesian_model(train_df):
         * NUTs sampler, converges faster than Gibbs
         * Run for 1k samples
     """
-    print("Beginning sampling progress for posteriors of beta random variables..")
+    print("Beginning sampling progress for posteriors of our random variables..")
     with pm.Model() as logistic_model:
         pm.glm.GLM.from_formula('binary_back_status ~ pelvic_tilt + lumbar_lordosis_angle + pelvic_radius + degree_spondylolisthesis',
                 train_df[['binary_back_status'] + SELECTED_FEATURES],
@@ -114,7 +114,7 @@ Sample Output:
 $> python bayes_project.py
 Load in and clean our data
 Split dataset into training and testing (80/20)
-Beginning sampling progress for posteriors of beta random variables..
+Beginning sampling progress for posteriors of our random variables..
 Auto-assigning NUTS sampler...
 Initializing NUTS using adapt_diag...
 Multiprocess sampling (4 chains in 4 jobs)

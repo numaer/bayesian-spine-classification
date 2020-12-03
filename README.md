@@ -62,6 +62,8 @@ For your convenience, there is also a __Bayes Project (With Visuals).html__ that
 - __bayes\_project.py__ - Python executable to run Bayesian logistic regression pymc3 sampler.
 - __Bayes Project (With Visuals).ipynb__ - This file runs the bayes\_project.py code in a Jupyter notebook and also shows the visual seen in the report
 - __Bayes Project (With Visuals).html__ - This file is the HTML/web browser viewable version of the notebook code and the graphs shown in the report.
+- __report.pdf__ - Submitted PDF report about project background, data analysis, model formulation, and results
+- __README.txt__ - Project documentation
 
 
 ### Troubleshooting

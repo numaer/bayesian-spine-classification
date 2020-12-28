@@ -1,12 +1,12 @@
 # Bayesian Logistic Regression Modelling for Classifying Back Pain Abnormality
 
-Back pain is a health condition that affects millions of people globally. Unfortunately, determining the causes of back pain is challenging due to the structural complexity of the spine. However, modern technology allows us to quantify characteristics of an individual's spine. With Bayesian logistic regression modelling, it's possible to process spine data to diagnose back pain abnormalities. The benefits of producing this model are:
+Back pain is a health condition that affects millions of people globally. Unfortunately, determining the causes of back pain is challenging due to the structural complexity of the spine. However, modern technology allows for quantifying characteristics of an individual's spine. With Bayesian logistic regression modelling, it is possible to process spine data to diagnose back pain abnormalities. The benefits of producing this model are:
 
 * Proactively inform a patient of potential future back pain and advise on preventative steps (e.g. keep lumbar at 180 degrees at all time)
 * Diagnose patients with chronic existing back pain and prescribe treatment (pelvic joint inflammation medication)
 * Understand key drivers behind a normal healthy back and an abnormal unhealthy back.
 
-Using Bayesian logistic regression methodology, it is possible to capture the relationships between back pain abnormality and back features. There are several reasons for this choice over other statistical learning models:
+Using Bayesian logistic regression methodology, a model can capture the relationships between back pain abnormality and back features. There are several reasons for this choice over other statistical learning models:
 
 * Given that the patient spine dataset is not large (310 data points), Bayesian methodology works elegantly by using expert opinion (priors) and updating it through the dataset (likelihood). The end result is a posterior distribution that incorporates the best of expert opinion and observed patient spine data.
 * Using Bayesian methods enables the use of probability distributions and credible sets for modelling features (i.e. $\beta$ coefficients). This gives the advantage of understanding how confident Bayesian estimates are and how they are associated with back pain abnormalities (response variable).
